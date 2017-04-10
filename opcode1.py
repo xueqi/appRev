@@ -124,70 +124,70 @@ def_op('BUILD_CLASS', 30)
 
 HAVE_ARGUMENT = 90              # Opcodes from here have an argument:
 
-name_op('STORE_NAME', 90)       # Index in name list
-name_op('DELETE_NAME', 91)      # ""
-def_op('UNPACK_SEQUENCE', 92)   # Number of tuple items
-jrel_op('FOR_ITER', 93)
-def_op('LIST_APPEND', 94)
-name_op('STORE_ATTR', 95)       # Index in name list
-name_op('DELETE_ATTR', 96)      # ""
-name_op('STORE_GLOBAL', 97)     # ""
-name_op('DELETE_GLOBAL', 98)    # ""
-def_op('DUP_TOPX', 99)          # number of items to duplicate
-def_op('LOAD_CONST', 100)       # Index in const list
+name_op('STORE_NAME', 142)       # Index in name list
+name_op('DELETE_NAME', 156)      # ""
+def_op('UNPACK_SEQUENCE', 122)   # Number of tuple items
+jrel_op('FOR_ITER', 146)
+def_op('LIST_APPEND', 154)
+name_op('STORE_ATTR', 129)       # Index in name list
+name_op('DELETE_ATTR', 92)      # ""
+name_op('STORE_GLOBAL', 110)     # ""
+name_op('DELETE_GLOBAL', 108)    # ""
+def_op('DUP_TOPX', 135)          # number of items to duplicate
+def_op('LOAD_CONST', 150)       # Index in const list
 hasconst.append(100)
-name_op('LOAD_NAME', 101)       # Index in name list
-def_op('BUILD_TUPLE', 102)      # Number of tuple items
+name_op('LOAD_NAME', 98)       # Index in name list
+def_op('BUILD_TUPLE', 132)      # Number of tuple items
 def_op('BUILD_LIST', 87)       # Number of list items
-def_op('BUILD_SET', 104)        # Number of set items
-def_op('BUILD_MAP', 105)        # Number of dict entries (upto 255)
-name_op('LOAD_ATTR', 106)       # Index in name list
-def_op('COMPARE_OP', 107)       # Comparison operator
+def_op('BUILD_SET', 96)        # Number of set items
+def_op('BUILD_MAP', 148)        # Number of dict entries (upto 255)
+name_op('LOAD_ATTR', 93)       # Index in name list
+def_op('COMPARE_OP', 111)       # Comparison operator
 hascompare.append(107)
-name_op('IMPORT_NAME', 108)     # Index in name list
-name_op('IMPORT_FROM', 109)     # Index in name list
-jrel_op('JUMP_FORWARD', 110)    # Number of bytes to skip
-jabs_op('JUMP_IF_FALSE_OR_POP', 111) # Target byte offset from beginning of code
+name_op('IMPORT_NAME', 131)     # Index in name list
+name_op('IMPORT_FROM', 113)     # Index in name list
+jrel_op('JUMP_FORWARD', 153)    # Number of bytes to skip
+jabs_op('JUMP_IF_FALSE_OR_POP', 127) # Target byte offset from beginning of code
 jabs_op('JUMP_IF_TRUE_OR_POP', 112)  # ""
-jabs_op('JUMP_ABSOLUTE', 113)        # ""
-jabs_op('POP_JUMP_IF_FALSE', 114)    # ""
-jabs_op('POP_JUMP_IF_TRUE', 115)     # ""
+jabs_op('JUMP_ABSOLUTE', 134)        # ""
+jabs_op('POP_JUMP_IF_FALSE', 145)    # ""
+jabs_op('POP_JUMP_IF_TRUE', 169)     # ""
 
-name_op('LOAD_GLOBAL', 116)     # Index in name list
+name_op('LOAD_GLOBAL', 152)     # Index in name list
 
-jabs_op('CONTINUE_LOOP', 119)   # Target address
-jrel_op('SETUP_LOOP', 120)      # Distance to target address
-jrel_op('SETUP_EXCEPT', 121)    # ""
-jrel_op('SETUP_FINALLY', 122)   # ""
+jabs_op('CONTINUE_LOOP', 100)   # Target address
+jrel_op('SETUP_LOOP', 107)      # Distance to target address
+jrel_op('SETUP_EXCEPT', 125)    # ""
+jrel_op('SETUP_FINALLY', 155)   # ""
 
-def_op('LOAD_FAST', 124)        # Local variable number
+def_op('LOAD_FAST', 94)        # Local variable number
 haslocal.append(124)
-def_op('STORE_FAST', 125)       # Local variable number
+def_op('STORE_FAST', 101)       # Local variable number
 haslocal.append(125)
-def_op('DELETE_FAST', 126)      # Local variable number
+def_op('DELETE_FAST', 115)      # Local variable number
 haslocal.append(126)
 
 def_op('RAISE_VARARGS', 90)    # Number of raise arguments (1, 2, or 3)
-def_op('CALL_FUNCTION', 131)    # #args + (#kwargs << 8)
-def_op('MAKE_FUNCTION', 132)    # Number of args with default values
-def_op('BUILD_SLICE', 133)      # Number of items
-def_op('MAKE_CLOSURE', 134)
-def_op('LOAD_CLOSURE', 135)
+def_op('CALL_FUNCTION', 128)    # #args + (#kwargs << 8)
+def_op('MAKE_FUNCTION', 133)    # Number of args with default values
+def_op('BUILD_SLICE', 112)      # Number of items
+def_op('MAKE_CLOSURE', 97)
+def_op('LOAD_CLOSURE', 117)
 hasfree.append(135)
-def_op('LOAD_DEREF', 136)
+def_op('LOAD_DEREF', 126)
 hasfree.append(136)
-def_op('STORE_DEREF', 137)
+def_op('STORE_DEREF', 99)
 hasfree.append(137)
 
-def_op('CALL_FUNCTION_VAR', 140)     # #args + (#kwargs << 8)
-def_op('CALL_FUNCTION_KW', 141)      # #args + (#kwargs << 8)
-def_op('CALL_FUNCTION_VAR_KW', 142)  # #args + (#kwargs << 8)
+def_op('CALL_FUNCTION_VAR', 137)     # #args + (#kwargs << 8)
+def_op('CALL_FUNCTION_KW', 138)      # #args + (#kwargs << 8)
+def_op('CALL_FUNCTION_VAR_KW', 139)  # #args + (#kwargs << 8)
 
 jrel_op('SETUP_WITH', 91)
 
-def_op('EXTENDED_ARG', 145)
+def_op('EXTENDED_ARG', 157)
 EXTENDED_ARG = 145
-def_op('SET_ADD', 146)
-def_op('MAP_ADD', 147)
+def_op('SET_ADD', 106)
+def_op('MAP_ADD', 120)
 
 del def_op, name_op, jrel_op, jabs_op
